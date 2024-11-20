@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator</title>
 </head>
 <body>
-    <table id = "calculator">
-        <tr>
-            <td colspan="3">
+     <div id="calculator">
+          <div id="display">
+            <form action="cal.js">
                 <input type="text" id = "result">
-            </td>
-            <td><input type="button" value="C"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="1"></td>
-            <td><input type="button" value="2"></td>
-            <td><input type="button" value="3"></td>
-            <td><input type="button" value="*"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="4"></td>
-            <td><input type="button" value="5"></td>
-            <td><input type="button" value="6"></td>
-            <td><input type="button" value="/"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7"></td>
-            <td><input type="button" value="8"></td>
-            <td><input type="button" value="9"></td>
-            <td><input type="button" value="+"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="0"></td>
-            <td><input type="button" value="."></td>
-            <td><input type="button" value="%"></td>
-            <td><input type="button" value="-"></td>
-        </tr>
-        <tr>
-            <td colspan="4"><input type="button" value="Reset"></td>
-        </tr>
-    </table>
+            </form>
+             
+          </div>
+          <button type="button" class="span-two" id="clear" onclick="clr()">C</button>
+          <button type="button" class="span-two" id="delete" onclick="del()" >DEL</button>
+          <button type="button" class="span-two"  id="equals" onclick="cal()">=</button>
+         
+
+          <button type="button" class="number" id="number-7" onclick="dis('7')">7</button>
+          <button type="button" class="number" id="number-8" onclick="dis('8')">8</button>
+          <button type="button" class="number" id="number-9" onclick="dis('9')">9</button>
+          <button type="button" class="operation" id="divide" onclick="op('/')">/</button>
+         
+          <button type="button" class="number" id="number-4" onclick="dis('4')">4</button>
+          <button type="button" class="number" id="number-5" onclick="dis('5')">5</button>
+          <button type="button" class="number" id="number-6" onclick="dis('6')">6</button>
+          <button type="button" class="operation" id="multiply" onclick="op('*')">*</button>
+        
+          <button type="button" class="number" id="number-3" onclick="dis('3')">3</button>
+          <button type="button" class="number" id="number-2" onclick="dis('2')">2</button>
+          <button type="button" class="number" id="number-1" onclick="dis('1')">1</button>
+          <button type="button" class="operation" id="subtract" onclick="op('-')">-</button>
+        
+          <button type="button" class="number" id="number-0" onclick="dis('0')">0</button>
+          <button type="button" class="dot" id="dot" onclick="dis('.')">.</button>
+          <button type="button" class="operation" id="remainder" onclick="op('%')">%</button>
+          <button type="button" class="operation" id="add" onclick="op('+')">+</button>
+        </div>
+    
+    <script src="cal.js"></script>
 </body>
 </html>
