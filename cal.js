@@ -1,12 +1,12 @@
 let result = document.getElementById("result");
 let  num1= '';
 let num2 = '';
-let operater = null;
+let operator = null;
 
 function clr(){
-    let  num1= '';
-    let num2 = '';
-    let operater = null;
+     num1= '';
+     num2 = '';
+     operator = null;
     result.value = '';
 }
 
@@ -15,10 +15,11 @@ function dis(value){
 }
 
 function op(opt){
-    if (operater === null) {
+    if (operator === null) {
         num1 = result.value;
+        operator = opt;
         result.value = '';
-        result.value += ` ${opt} `;
+        result.value += `${num1} ${opt} `; 
     }
 }
 
@@ -28,12 +29,11 @@ function del() {
 }
 
 function cal(){
-    if (operater !==null){
-        
-        const parts = result.value.split(' ');
-        num2 = parts[3];
+    if (operator !==null){
+       const parts = result.value.split(' ');
+        num2 = parts[2];
         let result1;
-        switch (operater) {
+        switch (operator) {
             case '+':
                 result1 = parseFloat(num1) + parseFloat(num2);
                 break;
@@ -56,7 +56,7 @@ function cal(){
         result.value = result1;
         num1 = '';
         num2 = '';
-        operater = null;
+        operator = null;
     }
     else {
         alert("No operation to calculate");
